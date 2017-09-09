@@ -1,0 +1,30 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <h3>
+           {{title}}
+         </h3>
+      </div>
+<div>
+  <!-- products details-->
+  <table class="table table-bordered table-hover">
+  <thead>
+    <tr> 
+      <th>Sl No</th>
+      <th>Name</th>
+      <th>Price</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of products; let i = index">
+    <td [ngStyle]="{ 'color': !(i % 2) ? 'red' :'blue' }">{{i + 1}}</td>
+    <td>{{p.title}}</td>
+    <td>{{p.price}}</td>
+    
+  </tr>
+  </tbody>
+</table>
+ </div>
+</div>
+</div>
